@@ -1,0 +1,15 @@
+<div class="characters-container">
+    <h1 class="characters-title"> Characters List </h1>
+    <ng-container *ngIf="characters?.length; else noData">
+        <div class="characters">
+            <div *ngFor="let character of characters" class="character" (click)="onCharacterSelect(character)">
+                <h4 class="character-name">{{ character.name }}</h4>
+            </div>
+        </div>
+    </ng-container>
+</div>
+<ng-template #noData>
+    <div class="no-data-container">
+        <h4 class="no-data">No data to display</h4>
+    </div>
+</ng-template>

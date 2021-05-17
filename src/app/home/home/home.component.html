@@ -1,0 +1,9 @@
+<div class="container">
+    <app-header></app-header>
+    <div class="filters-container">
+        <app-filters></app-filters>
+    </div>
+    <div class="list-container">
+        <app-characters-list [characters]="characters | async"></app-characters-list>
+    </div>
+</div>

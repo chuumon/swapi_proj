@@ -1,0 +1,17 @@
+<form class="filters-container" [formGroup]="filtersForm">
+    <div class="filter-container">
+        <label class="filter-label">Filter by movie</label>
+        <div class="filter">
+            <select class="select" (change)="filterByMovie($event.target.value)" formControlName="moviesControl"> 
+                <option *ngFor="let movie of movies" value="{{movie.episode_id}}">{{ movie.title }}</option> 
+            </select>
+            <div class="select-arrow"></div>
+        </div>
+    </div>
+    <div class="filter-container">
+        <label class="filter-label">Filter by specie</label>
+        <div class="filter">
+            <input class="input" type="text" placeholder="Enter Specie name (min 3 symbols)" formControlName="speciesControl">
+        </div>
+    </div>
+</form>
